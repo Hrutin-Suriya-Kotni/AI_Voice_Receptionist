@@ -10,6 +10,12 @@ ENV/
 .venv
 receptionist_env/
 
+# Windows
+*.bat.bak
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
 # Environment variables (keeping .env - user wants it pushed)
 .env.local
 

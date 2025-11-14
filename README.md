@@ -21,15 +21,25 @@ A modern, professional voice receptionist application powered by ElevenLabs Conv
 
 ### Installation
 
+#### For Windows Users 👉 [See Detailed Windows Setup Guide](WINDOWS_SETUP.md)
+
+**Quick Windows Setup:**
+1. Double-click `setup_windows.bat` to run automated setup
+2. Edit `.env` file and add your `ELEVENLABS_API_KEY`
+3. Double-click `run_windows.bat` to start the application
+
+#### For Mac/Linux Users
+
 1. **Clone or navigate to the repository:**
    ```bash
-   cd Voice_receptionist
+   git clone https://github.com/Hrutin-Suriya-Kotni/AI_Voice_Receptionist.git
+   cd AI_Voice_Receptionist
    ```
 
-2. **Create a virtual environment (recommended):**
+2. **Create a virtual environment:**
    ```bash
    python3 -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   source venv/bin/activate
    ```
 
 3. **Install dependencies:**
@@ -37,12 +47,8 @@ A modern, professional voice receptionist application powered by ElevenLabs Conv
    pip install -r requirements.txt
    ```
 
-4. **Create a `.env` file:**
-   ```bash
-   touch .env
-   ```
-
-5. **Add your ElevenLabs credentials to `.env`:**
+4. **Configure `.env` file:**
+   The `.env` file is already included. Just edit it and add your `ELEVENLABS_API_KEY`:
    ```env
    ELEVENLABS_API_KEY=your_api_key_here
    ELEVENLABS_AGENT_ID=agent_4401k9ybxkm3fvbtdhnj8s57fb53
@@ -52,18 +58,17 @@ A modern, professional voice receptionist application powered by ElevenLabs Conv
 
 ### Running the Application
 
-1. **Start the Flask server:**
-   ```bash
-   python app.py
-   ```
+**Windows:**
+- Double-click `run_windows.bat` OR
+- Open Command Prompt, activate venv: `venv\Scripts\activate`, then run: `python app.py`
 
-2. **Open your browser:**
-   Navigate to `http://localhost:5000`
+**Mac/Linux:**
+```bash
+source venv/bin/activate
+python app.py
+```
 
-3. **Start a conversation:**
-   - Click the microphone button
-   - Allow microphone access when prompted
-   - Start speaking naturally!
+Then open your browser to `http://localhost:5000` and click the microphone button!
 
 ## 📁 Project Structure
 
@@ -72,7 +77,10 @@ Voice_receptionist/
 ├── app.py                 # Flask backend server
 ├── requirements.txt       # Python dependencies
 ├── README.md             # This file
-├── .env                  # Environment variables (create this)
+├── WINDOWS_SETUP.md      # Detailed Windows setup guide
+├── setup_windows.bat     # Windows automated setup script
+├── run_windows.bat       # Windows quick start script
+├── .env                  # Environment variables (already included)
 ├── templates/
 │   └── index.html        # Main HTML template
 └── static/
