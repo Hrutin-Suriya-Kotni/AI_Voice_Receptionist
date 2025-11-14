@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta http-equiv="Permissions-Policy" content="microphone=*">
+    <title>Voice Receptionist | AI Assistant</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app" id="app">
+        <!-- Animated Background -->
+        <div class="background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
+                            <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                            <line x1="12" y1="19" x2="12" y2="22"/>
+                            <line x1="8" y1="22" x2="16" y2="22"/>
+                        </svg>
+                    </div>
+                    <div class="logo-text">
+                        <h1>Voice Receptionist</h1>
+                        <p>AI-Powered Assistant</p>
+                    </div>
+                </div>
+                <div class="status-badge" id="status-badge">
+                    <div class="status-dot"></div>
+                    <span class="status-text">Ready</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Hero Card -->
+            <div class="hero-card" id="hero-card">
+                <div class="card-glow"></div>
+                <div class="hero-content">
+                    <div class="hero-icon" id="hero-icon">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
+                            <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                            <line x1="12" y1="19" x2="12" y2="22"/>
+                            <line x1="8" y1="22" x2="16" y2="22"/>
+                        </svg>
+                    </div>
+                    <h2 class="hero-title" id="hero-title">Welcome</h2>
+                    <p class="hero-subtitle" id="hero-subtitle">Click the button below to start your conversation</p>
+                </div>
+            </div>
+
+            <!-- Voice Control Button -->
+            <div class="voice-control-container">
+                <button class="voice-button" id="voice-button" aria-label="Start voice conversation">
+                    <div class="voice-button-inner">
+                        <svg class="mic-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
+                            <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                            <line x1="12" y1="19" x2="12" y2="22"/>
+                            <line x1="8" y1="22" x2="16" y2="22"/>
+                        </svg>
+                        <svg class="stop-icon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
+                            <rect x="6" y="6" width="12" height="12" rx="2"/>
+                        </svg>
+                    </div>
+                    <div class="voice-ripple"></div>
+                    <div class="voice-ripple voice-ripple-2"></div>
+                </button>
+                <p class="voice-label" id="voice-label">Tap to Start</p>
+            </div>
+
+            <!-- Conversation Panel -->
+            <div class="conversation-panel" id="conversation-panel" style="display: none;">
+                <div class="panel-header">
+                    <h3>Conversation</h3>
+                    <button class="panel-close" id="panel-close" aria-label="Close conversation">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <line x1="18" y1="6" x2="6" y2="18"/>
+                            <line x1="6" y1="6" x2="18" y2="18"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="conversation-messages" id="conversation-messages">
+                    <!-- Messages will be added here -->
+                </div>
+            </div>
+
+            <!-- Loading Indicator -->
+            <div class="loading-indicator" id="loading-indicator" style="display: none;">
+                <div class="loading-spinner">
+                    <div class="spinner-ring"></div>
+                    <div class="spinner-ring"></div>
+                    <div class="spinner-ring"></div>
+                </div>
+                <p class="loading-text" id="loading-text">Connecting...</p>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Powered by <strong>ElevenLabs</strong> Conversational AI</p>
+        </footer>
+    </div>
+
+    <!-- Load ElevenLabs SDK -->
+    <script type="module" src="/static/js/app.js"></script>
+</body>
+</html>
+
